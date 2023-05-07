@@ -66,7 +66,7 @@ public class Corpus
         }
 
 
-        if (messages) System.Console.WriteLine("Corpus ctor Finished: " + (Environment.TickCount - timer)/1000.0);        
+        if (messages) System.Console.WriteLine($"Corpus ctor Finished: {(Environment.TickCount - timer)/1000.0)}s";        
     }
 
     private void CreateCache(string contentFolder, string lastModifiedDataPath, string documentsJsonPath, string lexiconJsonPath)
