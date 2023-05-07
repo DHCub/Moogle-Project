@@ -123,7 +123,7 @@ public class Corpus
     private static Document[] GetDocuments(string contentFolder)
     {
         // counting the files to get the length of the Document array
-        int fileCounter = Directory.EnumerateFiles(contentFolder).Count();
+        int fileCounter = Directory.EnumerateFiles(contentFolder, ".txt").Count();
 
         var newDocArray = new Document[fileCounter];
 
