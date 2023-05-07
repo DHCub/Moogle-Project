@@ -1,0 +1,3 @@
+-Copiar Documentos (formato .txt) en carpeta moogle!/Content 
+-Abrir carpeta moogle! en la consola
+-Ejecutar comando make dev
