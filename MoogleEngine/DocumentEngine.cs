@@ -28,7 +28,7 @@ public class Corpus
     {   
         int timer = Environment.TickCount;
 
-        string lastModifiedDataPath = Path.Combine("..", "MoogleEngine", "documents.json"); //"../MoogleEngine/lastModified.json";
+        string lastModifiedDataPath = Path.Combine("..", "MoogleEngine", "lastModified.json"); //"../MoogleEngine/lastModified.json";
         string documentsJsonPath = Path.Combine("..", "MoogleEngine", "documents.json"); //"../MoogleEngine/documents.json";
         string lexiconJsonPath = Path.Combine("..", "MoogleEngine", "lexicon.json"); //"../MoogleEngine/lexicon.json";
 
