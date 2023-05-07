@@ -41,6 +41,7 @@ public class Corpus
         }
         else
         {
+            if (messages) Console.WriteLine("Building Corpus");
             documents = GetDocuments(contentFolder);
             Lexicon = GetLexicon(documents);
             
