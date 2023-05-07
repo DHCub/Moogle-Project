@@ -1,3 +1,3 @@
 -Copiar Documentos (formato .txt) en carpeta Content 
 -Abrir carpeta Moogle-Project en la consola
--Ejecutar comando make dev
+-Ejecutar comando make dev o dotnet run --project MoogleServer
