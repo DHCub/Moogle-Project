@@ -1,0 +1,12 @@
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/bin/Debug/net6.0/MoogleEngine.deps.json
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/bin/Debug/net6.0/MoogleEngine.dll
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/bin/Debug/net6.0/MoogleEngine.pdb
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.csproj.AssemblyReference.cache
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.AssemblyInfoInputs.cache
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.AssemblyInfo.cs
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.csproj.CoreCompileInputs.cache
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.dll
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/refint/MoogleEngine.dll
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/MoogleEngine.pdb
+/home/dhc/Desktop/CC/Programming/moogle!/MoogleEngine/obj/Debug/net6.0/ref/MoogleEngine.dll
