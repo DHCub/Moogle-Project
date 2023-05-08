@@ -4,7 +4,7 @@ public static class SnippetEngine
 {
     public static string GetSnippet(Query query, string filePath, Corpus content, int Length = 60)
     {
-        if (Length == 0) return "";
+        if (Length <= 0) return "";
         var currSnippet = new SnippetBuilder(Length);
         string text;
 
