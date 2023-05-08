@@ -271,7 +271,7 @@ public class Matrix
 
     private Matrix SupressRowCol(int row, int col)
     {
-        //if (data.GetLength(0) != data.GetLength(1)) throw(new Exception());
+        
         if (!ValidPos(row, col)) throw new IndexOutOfRangeException();
 
         var answ = new Matrix(this.Rows - 1, this.Cols - 1);
