@@ -120,7 +120,7 @@ public class Matrix
         
         for (int answ_row = 0; answ_row < a.Rows; answ_row++)
         {
-            for (int answ_col = 0; answ_col < a.Cols; answ_col++)
+            for (int answ_col = 0; answ_col < b.Cols; answ_col++)
             {
                 double sum = 0;
                 for (int k = 0; k < a.Cols; k++)
