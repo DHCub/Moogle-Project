@@ -9,7 +9,7 @@ if [ $# -lt 1 ]; then
 
 elif [ $1 == "run" ]; then
 	cd ..
-	make dev
+	dotnet watch run --project MoogleServer
 
 elif [ $1 == "report" ]; then
 	cd ../informe
