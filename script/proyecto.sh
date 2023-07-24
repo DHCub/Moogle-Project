@@ -4,6 +4,48 @@ ABS="$(dirname "$(readlink -f -- "$0")")"
 
 cd "$ABS"
 
+function check_file()
+{
+	if ! test -f $1; then 
+		ERROR_FOUND=1;
+		echo "Missing File: $1"
+	fi
+}
+
+function Generate_Presentation()
+{
+	ERROR_FOUND=0;
+	check_file "asterisk1.png"
+	check_file "asterisk2.png"
+	check_file "correction.png"
+	check_file "exclude1.png"
+	check_file "exclude2.png"
+	check_file "include1.png"
+	check_file "include2.png"
+	check_file "sample_search.png"
+	check_file "snippet.png"
+	check_file "Presentación.tex"
+
+	if [ $ERROR_FOUND -eq 1 ];then
+		echo "Cannot compile LaTeX presentation because of missing files"
+	else 
+		pdflatex Presentación.tex
+		pdflatex Presentación.tex
+	fi;
+}
+
+function Generate_Report()
+{
+	ERROR_FOUND=0;
+	check_file "Reporte.tex"
+
+	if [ $ERROR_FOUND -eq 1 ];then
+		echo "Cannot compile LaTeX report because of missing files"
+	else 
+		pdflatex Reporte.tex
+	fi;
+}
+
 if [ $# -lt 1 ]; then
 	echo "Script takes one of the following arguments:"
 	echo "* 'run': Runs the project"
@@ -19,36 +61,35 @@ elif [ "$1" = "run" ]; then
 
 elif [ "$1" = "report" ]; then
 	cd ../informe
-	pdflatex Reporte.tex
+	Generate_Report
 
 elif [ "$1" = "slides" ]; then
 	cd ../presentación
-	pdflatex Presentación.tex
-	pdflatex Presentación.tex
+	Generate_Presentation
 
 elif [ "$1" = "show_slides" ]; then
 	cd ../presentación
 
 	if ! test -f "Presentación.pdf"; then
-		cd ../script
-		./proyecto.sh slides
-		cd ../presentación; fi
+		Generate_Presentation;fi
 
-	if [ $# -gt 1 ]; then
-		"$2" Presentación.pdf
-	else open Presentación.pdf; fi
+	if test -f "Presentación.pdf";then
+		if [ $# -gt 1 ]; then
+			"$2" Presentación.pdf
+		else open Presentación.pdf; fi
+	fi
 
 elif [ "$1" = "show_report" ]; then
 	cd ../informe
 
-	if ! test -f "Reporte.pdf";then
-		cd ../script
-		./proyecto.sh report
-		cd ../informe; fi
-
-	if [ $# -gt 1 ]; then
-		"$2" Reporte.pdf
-	else open Reporte.pdf; fi
+	if ! test -f "Reporte.pdf"; then
+		Generate_Report;fi
+	
+	if test -f "Reporte.pdf"; then
+		if [ $# -gt 1 ]; then
+			"$2" Reporte.pdf
+		else open Reporte.pdf; fi
+	fi
 
 elif [ "$1" = "clean" ]; then
 	cd ../presentación
